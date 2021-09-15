@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<style>
+    div {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    table {
+        margin-top: 30px;
+        color: #80ffe7;
+        background-color: #1e347b;
+    }
+    a:link{
+        font-size: 20px;
+        text-decoration: none;
+    }
+    a{
+        color: yellow;
+        margin-top: 20px;
+    }
+
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{%static 'css/demo.css'%}">
+</head>
+<body>
+<div>
+    <h1> Movie Information </h1>
+    <hr>
+    {%if movie_list%}
+    <table border="2" align="center">
+        <thead>
+        <th> Release Date</th>
+        <th> Movie Name</th>
+        <th> Hero</th>
+        <th> Heroine</th>
+
+        </thead>
+        {%for mov in movie_list%}
+        <tr>
+            <td> {{mov.rdate}}</td>
+            <td> {{mov.movie_name}}</td>
+            <td> {{mov.hero}}</td>
+            <td> {{mov.heroine}}</td>
+            <!--           <td> {{mov.rating}} </td>-->
+        </tr>
+        {%endfor%}
+    </table>
+</div>
+{%else%}
+<p> Movie Not Release </p>
+{%endif%}
+<div>
+    <a class="btn btn-primary btn-lg center" href="/home" role="link"> Home Page </a>
+</div>
+</body>
+</html>

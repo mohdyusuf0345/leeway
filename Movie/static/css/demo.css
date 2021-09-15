@@ -1,0 +1,15 @@
+
+.container .jumbotron{
+    margin-top: 50px;
+    background: orange;
+    font-family: 'MerriWeather', serif;
+
+}
+
+body{
+    background-image:url(https://image.shutterstock.com/image-vector/christmas-greeting-card-calligraphic-season-450w-1192564498.jpg);
+    /*background-image:url(https://unsplash.com/photos/Bs2ajKmJPzA);*/
+    background-repeat: no-repeat;
+    color: black;
+    background-size: cover;
+}
